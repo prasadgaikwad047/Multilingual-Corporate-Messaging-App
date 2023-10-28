@@ -1,0 +1,132 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
+
+class SearchBarPage extends StatefulWidget {
+  const SearchBarPage({super.key});
+
+  @override
+  _SearchBarPageState createState() => _SearchBarPageState();
+}
+
+class _SearchBarPageState extends State<SearchBarPage> {
+  String _searchText = '';
+  late Map<String, dynamic>? userMap = {};
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF171717),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 16, right: 16, top: 100),
+            child: SearchBarWidget(
+              searchText: _searchText,
+              onSearchChanged: (value) {
+                setState(() {
+                  _searchText = value;
+                });
+              },
+              onSearchButtonPressed: () async {
+                FirebaseFirestore _firestore = FirebaseFirestore.instance;
+
+                await _firestore
+                    .collection('users')
+                    .where("email", isEqualTo: _searchText)
+                    .get()
+                    .then((value) {
+                  setState(() {
+                    userMap = value.docs[0].data();
+                    _searchText = '';
+                  });
+                  print(" this is $userMap");
+                });
+
+                print('Search text: $_searchText');
+              },
+            ),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          userMap != null
+              ? Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15.0),
+                    child: Container(
+                      color: Colors.white,
+                      child: ListTile(
+                        onTap: () {},
+                        leading: const Padding(
+                          padding: EdgeInsets.only(top: 8.0),
+                          child: Icon(
+                            Icons.account_box,
+                            color: Colors.black,
+                          ),
+                        ),
+                        title: Text(
+                          userMap?['name'] ?? '',
+                          style: const TextStyle(
+                              color: Colors.black, fontSize: 16),
+                        ),
+                        subtitle: Text(userMap?['email'] ?? ''),
+                        trailing: const Icon(Icons.chat, color: Colors.black),
+                      ),
+                    ),
+                  ),
+                )
+              : Container(),
+        ],
+      ),
+    );
+  }
+}
+
+class SearchBarWidget extends StatefulWidget {
+  final String searchText;
+  final ValueChanged<String> onSearchChanged;
+  final VoidCallback onSearchButtonPressed;
+
+  SearchBarWidget({
+    required this.searchText,
+    required this.onSearchChanged,
+    required this.onSearchButtonPressed,
+  });
+
+  @override
+  State<SearchBarWidget> createState() => _SearchBarWidgetState();
+}
+
+class _SearchBarWidgetState extends State<SearchBarWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30.0),
+        color: Colors.grey[300],
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: TextField(
+                onChanged: widget.onSearchChanged,
+                decoration: InputDecoration(
+                  hintText: 'Search...',
+                  border: InputBorder.none,
+                  icon: Icon(Icons.search, color: Colors.grey),
+                ),
+              ),
+            ),
+          ),
+          IconButton(
+            icon: Icon(Icons.send, color: Colors.grey),
+            onPressed: widget.onSearchButtonPressed,
+          ),
+        ],
+      ),
+    );
+  }
+}

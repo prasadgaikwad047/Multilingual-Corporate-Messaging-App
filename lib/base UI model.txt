@@ -1,0 +1,255 @@
+return Scaffold(
+      backgroundColor: const Color(0xFF171717),
+      body: Stack(children: [
+        Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 70, left: 5, right: 5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.menu,
+                        color: Colors.white,
+                      )),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.search,
+                        color: Colors.white,
+                      )),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 50,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.only(left: 10),
+                children: [
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "Messages",
+                        style: TextStyle(color: Colors.grey, fontSize: 26),
+                      )),
+                  const SizedBox(
+                    width: 35,
+                  ),
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "Online",
+                        style: TextStyle(color: Colors.grey, fontSize: 26),
+                      )),
+                  const SizedBox(
+                    width: 35,
+                  ),
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "Group",
+                        style: TextStyle(color: Colors.grey, fontSize: 26),
+                      )),
+                  const SizedBox(
+                    width: 35,
+                  ),
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "More",
+                        style: TextStyle(color: Colors.grey, fontSize: 26),
+                      )),
+                ],
+              ),
+            )
+          ],
+        ),
+        Positioned(
+            top: 190,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: 220,
+              padding: const EdgeInsets.only(top: 5, left: 25, right: 25),
+              decoration: const BoxDecoration(
+                  color: Color(0xFF27c1a9),
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(40),
+                      topRight: Radius.circular(40))),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        "favourite contacts",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.more_horiz,
+                            color: Colors.white,
+                          )),
+                    ],
+                  ),
+                  SizedBox(
+                      height: 90,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: const [
+                          BuildContactAvatar(
+                            name: "Alla",
+                            filename: 'profileimg1.jpg',
+                          ),
+                          BuildContactAvatar(
+                            name: "July",
+                            filename: 'profileimg2.jpg',
+                          ),
+                          BuildContactAvatar(
+                            name: "Mikle",
+                            filename: 'profileimg3.jpg',
+                          ),
+                          BuildContactAvatar(
+                            name: "Jack",
+                            filename: 'profileimg4.jpg',
+                          ),
+                          BuildContactAvatar(
+                            name: "August",
+                            filename: 'profileimg5.jpg',
+                          ),
+                          BuildContactAvatar(
+                            name: "Alice",
+                            filename: 'profileimg6.jpg',
+                          ),
+                          BuildContactAvatar(
+                            name: "Merry",
+                            filename: 'profileimg7.jpg',
+                          ),
+                          BuildContactAvatar(
+                            name: "Chris",
+                            filename: 'profileimg8.jpg',
+                          )
+                        ],
+                      ))
+                ],
+              ),
+            )),
+        Positioned(
+            top: 360,
+            right: 0,
+            left: 0,
+            bottom: 0,
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 15),
+              decoration: const BoxDecoration(
+                  color: Color(0xFFEFFFFC),
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(40),
+                      topRight: Radius.circular(40))),
+              child: ListView(padding: EdgeInsets.only(left: 25), children: [
+                BuildChatsList('Alla', 'Hello how are you?', 'profileimg1.jpg'),
+                BuildChatsList('Alice', 'Can We meet', 'profileimg7.jpg'),
+                BuildChatsList(
+                    'Jack', 'I am ready to work with you', 'profileimg4.jpg'),
+                BuildChatsList(
+                    'Mikle', 'Are you with Kyla again?', 'profileimg3.jpg'),
+                BuildChatsList('July', 'i got your gift', 'profileimg2.jpg'),
+                BuildChatsList(
+                    'August', 'I will get back to you', 'profileimg5.jpg'),
+                BuildChatsList('Merry', 'Hey whatsup?', 'profileimg6.jpg'),
+                BuildChatsList(
+                    'Chris', 'i am not feeling well', 'profileimg8.jpg'),
+                // if func not accessible in other pages, putback the code here and extract as widget with samename
+              ]),
+            ))
+      ]),
+    );
+   }
+
+  Column BuildChatsList(String name, String message, String filename) {
+    return Column(
+      children: [
+        Row(
+          // add to this row or wrap this row for more elments in chatlist column ,, see video
+          children: [
+            UserAvatar(filename: filename),
+            SizedBox(
+              width: 15,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  name,
+                  style: const TextStyle(color: Colors.grey),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  message,
+                  style: const TextStyle(color: Colors.black),
+                )
+              ],
+            )
+          ],
+        ),
+        const Divider(
+          indent: 70,
+        ),
+      ],
+    );
+  }
+ }
+
+class BuildContactAvatar extends StatelessWidget {
+  final String filename;
+  final String name;
+  const BuildContactAvatar(
+      {super.key, required this.filename, required this.name});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 20),
+      child: Column(
+        children: [
+          UserAvatar(
+            filename: filename,
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Text(
+            name,
+            style: const TextStyle(color: Colors.white, fontSize: 16),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class UserAvatar extends StatelessWidget {
+  final String filename;
+  const UserAvatar({
+    super.key,
+    required this.filename,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return CircleAvatar(
+      radius: 32,
+      backgroundColor: Colors.white,
+      child: CircleAvatar(
+        radius: 29,
+        backgroundImage: Image.asset('assets/images/$filename').image,
+      ),
+    );
+  }
+}
