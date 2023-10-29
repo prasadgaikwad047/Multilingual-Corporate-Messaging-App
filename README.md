@@ -10,12 +10,12 @@ The Multilingual Corporate Chat App is designed to streamline professional commu
 <table>
   <tr>
     <td align="center">
-      <h2>First Image Title</h2>
+      <h2>First Home Screen</h2>
       <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/Homepage.jpeg" alt="First Image" width="250" height="500">
     </td>
     <td align="center">
-      <h2>Second Image Title</h2>
-      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/Homepage.jpeg" alt="Second Image" width="250" height="500">
+      <h2>Organisation Screen</h2>
+      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/Organisation Page.jpeg" alt="Second Image" width="250" height="500">
     </td>
   </tr>
 </table>
