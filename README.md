@@ -22,11 +22,11 @@ The Multilingual Corporate Chat App is designed to streamline professional commu
   <tr>
     <td align="center">
       <h2> Personal Chat</h2>
-      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/original%20chat.jpeg" alt="First Image" width="250" height="500">
+      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/original%20chat.jpeg" alt="First Image" width="300" height="600">
     </td>
     <td align="center">
-      <h2>Same chat in different language</h2>
-      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/translated%20chat.jpeg" alt="Second Image" width="250" height="500">
+      <h2>Translation Feature</h2>
+      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/translated%20chat.jpeg" alt="Second Image" width="300" height="600">
     </td>
   </tr>
 </table>
@@ -35,11 +35,11 @@ The Multilingual Corporate Chat App is designed to streamline professional commu
   <tr>
     <td align="center">
       <h2> Group chat(Lang Eng)</h2>
-      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/groupchat%20lang1.jpeg" alt="First Image" width="250" height="500">
+      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/groupchat%20lang1.jpeg" alt="First Image" width="300" height="600">
     </td>
     <td align="center">
       <h2>Group chat (Lang Hi)</h2>
-      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/groupchat%20lang2.jpeg" alt="Second Image" width="250" height="500">
+      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/groupchat%20lang2.jpeg" alt="Second Image" width="300" height="600">
     </td>
   </tr>
 </table>
@@ -48,11 +48,11 @@ The Multilingual Corporate Chat App is designed to streamline professional commu
   <tr>
     <td align="center">
       <h2> Sign Up</h2>
-      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/sign%20up.jpeg" alt="First Image" width="250" height="500">
+      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/sign%20up.jpeg" alt="First Image" width="300" height="600">
     </td>
     <td align="center">
       <h2>Login</h2>
-      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/login.jpeg" alt="Second Image" width="250" height="500">
+      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/login.jpeg" alt="Second Image" width="300" height="600">
     </td>
   </tr>
 </table>
@@ -61,18 +61,24 @@ The Multilingual Corporate Chat App is designed to streamline professional commu
   <tr>
     <td align="center">
       <h2> Create new group</h2>
-      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/create%20group%20page.jpeg" alt="First Image" width="250" height="500">
+      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/create%20group%20page.jpeg" alt="First Image" width="300" height="600">
     </td>
     <td align="center">
       <h2>Create an Organisation</h2>
-      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/org%20create%20page.jpeg" alt="Second Image" width="250" height="500">
+      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/org%20create%20page.jpeg" alt="Second Image" width="300" height="600">
     </td>
   </tr>
 </table>
 
-<p align="center">
-  <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/search%20page.jpeg" alt="Search Employees/Clients" width="250" height="500">
-</p>
+  
+<table>
+  <tr>
+    <td align="center">
+      <h2>Search Employees/Clients</h2>
+      <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/search%20page.jpeg" alt="First Image" width="300" height="600">
+    </td>
+  </tr>
+</table>
 
 
 
