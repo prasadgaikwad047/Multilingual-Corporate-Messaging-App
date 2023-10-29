@@ -8,15 +8,16 @@ The Multilingual Corporate Chat App is designed to streamline professional commu
  # <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/Homepage.jpeg" alt="Description" width="300" height="500">
 #</p>
 <div style="display: flex; flex-direction: row;">
-    <div style="flex: 50%; padding: 5px; text-align: center;">
+    <div style="flex: 50%; text-align: center;">
         <h2>First Image Title</h2>
-        <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/Homepage.jpeg" alt="First Image" style="width: 100px; height: 200px; display: block;">
+        <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/Homepage.jpeg" alt="First Image" style="width: 300px; height: 200px;">
     </div>
-    <div style="flex: 50%; padding: 5px; text-align: center;">
+    <div style="flex: 50%; text-align: center;">
         <h2>Second Image Title</h2>
-        <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/Homepage.jpeg" alt="Second Image" style="width: 100px; height: 200px; display: block;">
+        <img src="https://github.com/prasadgaikwad047/Multilingual-Corporate-Messaging-App/blob/main/App%20ss/Homepage.jpeg" alt="Second Image" style="width: 300px; height: 200px;">
     </div>
 </div>
+
 
 
 
