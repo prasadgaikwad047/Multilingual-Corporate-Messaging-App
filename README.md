@@ -1,6 +1,7 @@
 
 
-Multilingual Corporate Chat App
+# Multilingual Corporate Chat App
+
 The Multilingual Corporate Chat App is a cutting-edge communication platform designed to streamline professional messaging for organizations and freelancers. By providing a dedicated space for corporate conversations, the app ensures that personal and professional communications remain separate, eliminating the need to rely on mixed-use chat applications.
 
 Key Features
